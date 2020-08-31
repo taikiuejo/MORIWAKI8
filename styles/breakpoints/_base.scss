@@ -1,0 +1,440 @@
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: $spGlobalTextSize;
+  color: $GlobalTextColor;
+  // background-color: $bgColor;
+  font-weight: medium;
+}
+
+// アンカー
+a {
+  text-decoration: none;
+  color: $GlobalTextColor;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p,
+dt,
+dd {
+  letter-spacing: 0.1em;
+  line-height: 2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+// 画面幅設定
+.contet-width {
+  width: 80%;
+  max-width: $contentMaxWidth;
+  margin: 0 auto;
+}
+
+// メインタイトル
+.main-title {
+  font-size: $spTitle;
+  // font-weight: bold;
+  // margin-bottom: 20px;
+}
+
+// ヘッダー
+.header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $White;
+  &__inner {
+    @extend .contet-width;
+    display: flex;
+    height: $spHeaderHeight;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+// グローバルメニュー
+.global-nav {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $White;
+  transition: opacity 0.5s, visibility 0.5s;
+  &__lists {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  &__list {
+    text-align: center;
+    margin-bottom: $smallMargin;
+  }
+  &__link {
+    font-weight: bold;
+  }
+}
+
+// ハンバーガーメニュー
+.humberger-menu {
+  // position: relative;
+  // display: flex;
+  // align-items: center;
+  &__btn {
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    outline: none !important;
+    background-color: transparent;
+    & > span {
+      background-color: $GlobalTextColor;
+      display: block;
+      width: 30px;
+      height: $spHumbergerMenuHeight;
+      margin-bottom: 6px;
+      transition: transform 0.5s;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// ハンバーガーメニューのトリガーがクリックされたとき
+.menu-open {
+  & .humberger-menu {
+    &__btn {
+      & > span {
+        &:nth-child(1) {
+          transform: translateY(8px) rotate(135deg);
+        }
+        &:nth-child(2) {
+          transform: translateX(-20px) scaleX(0);
+        }
+        &:nth-child(3) {
+          transform: translateY(-8px) rotate(-135deg);
+        }
+      }
+    }
+  }
+  & .global-nav {
+    visibility: visible;
+    opacity: .95;
+  }
+}
+
+// メインビジュアル
+.main-visual {
+  // position: relative;
+  padding-top: $spHeaderHeight;
+  // overflow: hidden;
+  // padding-bottom: 56.25%;
+  // height: 0;
+  &__visual {
+    // position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    & > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  // &__logo {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   & > img {
+  //     transform: scale(0.3);
+  //     // background-color: black;
+  //   }
+  // }
+}
+
+// MORIWAKI Videoについて
+.about {
+  background-image: url(../images/bg-movielogo.png);
+  background-repeat: no-repeat;
+  background-position: 140px 120px;
+  &__inner {
+    @extend .contet-width;
+  }
+  &__title {
+    font-size: $spMainTitle;
+    padding-top: 40px;
+    margin-bottom: $smallMargin;
+  }
+
+  &__text {
+    margin-bottom: $smallMargin;
+  }
+  &__btn {
+    padding-bottom: $smallPadding;
+    text-align: center;
+  }
+}
+
+// PV
+.promotion-video {
+  width: 100%;
+  &__inner {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .video-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    height: 0;
+    &__video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__btn {
+    padding-top: 40px;
+    text-align: center;
+  }
+}
+
+// 特徴
+.feature {
+  &__inner {
+    @extend .contet-width;
+  }
+
+  &__title {
+    font-size: $spMainTitle;
+    padding-top: 50px;
+    margin-bottom: $smallMargin;
+  }
+  &__cards {
+    width: 100%;
+  }
+  &__card {
+    // background-color: #f5f5f5;
+    // box-shadow: 0 0 20px rgba(0,0,0,.1);
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .card {
+    &__img {
+      margin-bottom: 10px;
+      & > img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &__textarea {
+      width: 90%;
+      margin: 0 auto;
+      // padding-bottom: 10px;
+    }
+    &__title {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+}
+// お客様の声
+.customer {
+  &__title {
+    padding-top: 50px;
+    margin-bottom: $smallMargin;
+    font-size: $spMainTitle;
+    @extend .contet-width;
+  }
+  &__cards {
+    display: flex;
+  }
+  &__card {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    border-radius: 7px;
+    overflow: hidden;
+  }
+  .card {
+    &__img {
+      & > img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &__textarea {
+      width: 90%;
+      margin: 0 auto;
+      padding: 10px 0;
+    }
+    &__text {
+      font-size: 12px;
+    }
+  }
+}
+// 質問
+.faq {
+  &__inner {
+    @extend .contet-width;
+  }
+  &__title {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+}
+.accordion {
+  background-color: #f5f5f5;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  padding: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &__title {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &--text {
+      flex-basis: 90%;
+    }
+    &--btn {
+      position: relative;
+      flex-basis: 4%;
+      text-align: center;
+      &:before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 12px;
+        height: 2px;
+        background-color: $GlobalTextColor;
+        transition: 0.3s;
+        transform: rotate(-90deg);
+      }
+      &:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 12px;
+        height: 2px;
+        background-color: $GlobalTextColor;
+        transition: 0.2s;
+      }
+      // is-openがついているとき
+      &.is-open {
+        &:before {
+          transform: rotate(0deg);
+        }
+        &:after {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  &__body {
+    padding-top: 20px;
+  }
+}
+// MoriwakiVideoの思い
+.message {
+  &__inner {
+    width: 90%;
+    background: linear-gradient(to bottom right, #fff, #efefef);
+    margin: 50px 0;
+    padding: 30px 10%;
+  }
+  &__title {
+    padding-bottom: 30px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  &__text {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+// ページトップ
+.page-top {
+  .page-top__btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 90;
+  }
+}
+
+// フッター
+// .footer {
+//   &__inner {
+//     text-align: center;
+//     @extend .contet-width;
+//     padding: 50px 0;
+//   }
+//   &__title {
+//     & > a {
+//       font-size: 24px;
+//       color: $gloabaltxt;
+//       transition: opacity 0.5s;
+//       &:hover {
+//         opacity: 0.7;
+//       }
+//     }
+//     margin-bottom: 30px;
+//   }
+//   &__ul {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     margin-bottom: 60px;
+//   }
+//   &__li {
+//     font-weight: bold;
+//     margin-bottom: 10px;
+//   }
+//   &__link {
+//     color: $gloabaltxt;
+//     transition: opacity 0.5s;
+//     &:hover {
+//       opacity: 0.7;
+//     }
+//   }
+//   .copy-right {
+//     font-size: 14px;
+//   }
+// }

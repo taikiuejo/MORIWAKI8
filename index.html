@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- リセットCSSここから -->
+    <link rel="stylesheet" href="styles/vendors/reset.css" />
+    <!-- googlefontsここから -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google fontsここまで -->
+    <!-- aos.cssここから  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- aos.cssここまで  -->
+    <!-- swiper.cssここから -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- swiper.cssここまで -->
+    <!-- fontawesomeここから -->
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <!-- fontawesomeここまで -->
+    <!-- スタイルシートここから -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <!-- スタイルシートここまで -->
+    <!-- jquery CDNここから-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- jquery CDNここまで -->
+    <!-- アコーディオンここから -->
+    <script src="scripts/libs/accordion.js"></script>
+    <!-- アコーディオンここまで -->
+    <!-- page-top.jsここから-->
+    <script src="scripts/libs/page-top.js"></script>
+    <!-- page-top.jsここまで-->
+    <!-- smooth scroll.jsここから-->
+    <script src="scripts/libs/smooth-scroll.js"></script>
+    <!-- smooth scroll.jsここまで -->
+
+    <title>MORIWAKI Video</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="#"> MORIWAKI Video </a>
+        </h1>
+        <div class="humberger-menu">
+          <div class="humberger-menu__trigger js-humberger-menu__trigger">
+            <button class="humberger-menu__btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <nav class="global-nav">
+        <ul class="global-nav__lists">
+          <li class="global-nav__list">
+            <a class="global-nav__link" href="#">MORIWAKI Videoについて</a>
+          </li>
+          <li class="global-nav__list">
+            <a class="global-nav__link" href="#feature"
+              >私たちが大切にしていること</a
+            >
+          </li>
+          <li class="global-nav__list">
+            <a class="global-nav__link" href="#customer">お客様の声</a>
+          </li>
+          <li class="global-nav__list">
+            <a class="global-nav__link" href="#faq">よくある質問</a>
+          </li>
+          <li class="global-nav__list">
+            <a class="global-nav__link" href="#message">MORIWAKI Videoの思い</a>
+          </li>
+          <li class="global-nav__list">
+            <a class="global-nav__link btn" href="https://moriwaki-video.youcanbook.me/">予約する</a>
+          </li>
+          <li class="global-nav__list">
+            <a class="global-nav__link btn" href="#">お問い合わせ</a>
+          </li>
+        </ul>
+        <ul class="sns-btns">
+          <li class="sns-btn">
+            <a href="#" class="sns-link"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li class="sns-btn">
+            <a href="#" class="sns-link"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li class="sns-btn">
+            <a href="#" class="sns-link"><i class="fab fa-youtube"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="main-visual">
+        <div class="main-visual__visual">
+          <img src="images/S__23953523.jpg" alt="" />
+        </div>
+        <!-- <div class="main-visual__logo">
+          <img src="images/logo_main.png" alt="" />
+        </div> -->
+      </section>
+      <section class="about">
+        <div class="about__inner">
+          <h2 class="about__title">MORIWAKI Videoについて</h2>
+          <div class="about__texts">
+            
+            <p class="about__text">
+              MORIWAKI Videoは<br />
+              ご両親や身近な人に<br />
+              感謝の想いを伝えるための<br />
+              サービスです。
+            </p>
+            <p class="about__text">
+              直接伝えるのは恥ずかしい。 <br />
+              忙しくて会えていない。<br />
+              きっかけがない。
+            </p>
+            <p class="about__text">
+              私たちはそんな方の<br />
+              お手伝いをしております。<br />
+              MORIWAKI Videoで <br />
+              あなたの想いを伝えてみませんか？
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="promotion-video">
+        <div class="promotion-video__inner">
+          <div class="video-wrapper">
+            <div id="player" class="video-wrapper__video"></div>
+          </div>
+          <div class="promotion-video__btn">
+            <a class="btn" href="#">
+              <i class="fas fa-angle-right fa-position-right"></i
+              >もっと詳しく</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="feature" id="feature">
+        <div class="feature__inner">
+          <h2 class="feature__title">私たちが大切にしていること</h2>
+          <div class="feature__cards">
+            <div class="feature__card">
+              <figure class="card__img">
+                <img
+                  src="images/spot-b56221ba9755b63507a3951eb85c17605e5fd63bda30fd093348a86378d8e4c9.png"
+                  alt=""
+                />
+              </figure>
+              <div class="card__textarea">
+                <h3 class="card__title">あなたの想いに寄り添う</h3>
+                <p class="card__text">
+                  研修を受けたスタッフがインタビューを担当します。あなたの想いに寄り添い自然と言葉が溢れ出る。私たちはそんなインタビューを心がけております。
+                </p>
+              </div>
+            </div>
+            <div class="feature__card">
+              <figure class="card__img">
+                <img
+                  src="images/spot-b56221ba9755b63507a3951eb85c17605e5fd63bda30fd093348a86378d8e4c9.png"
+                  alt=""
+                />
+              </figure>
+              <div class="card__textarea">
+                <h3 class="card__title">一緒につくる</h3>
+                <p class="card__text">
+                  映像クリエイターが編集を担当し、完成した動画は確認していただけます。もちろん再編集もOK。想いが伝わる作品を一緒につくります。
+                </p>
+              </div>
+            </div>
+            <div class="feature__card">
+              <figure class="card__img">
+                <img
+                  src="images/spot-b56221ba9755b63507a3951eb85c17605e5fd63bda30fd093348a86378d8e4c9.png"
+                  alt=""
+                />
+              </figure>
+              <div class="card__textarea">
+                <h3 class="card__title">撮りたい場所で撮れる</h3>
+                <p class="card__text">
+                  zoomなどを使ったオンラインでの撮影のため、全国どこでも撮影できます。また、ご希望であれば、あなたのお好みの場所へ私たちが主張して撮影します。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="customer" id="customer">
+        <div class="customer__inner">
+          <h2 class="customer__title">お客様の声</h2>
+          <div class="customer__cards">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide customer__card">
+                  <figure class="card__img">
+                    <img src="images/S__23953523.jpg" alt="" />
+                  </figure>
+                  <div class="card__textarea">
+                    <p class="card__text">
+                      両親にプレゼントしたところ、すごく喜んでくれました。普段恥ずかしくて伝えられない想いをこうして伝えることができてよかったです。（正木さん
+                      / 25歳）
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide customer__card">
+                  <figure class="card__img">
+                    <img src="images/S__23953523.jpg" alt="" />
+                  </figure>
+                  <div class="card__textarea">
+                    <p class="card__text">
+                      両親にプレゼントしたところ、すごく喜んでくれました。普段恥ずかしくて伝えられない想いをこうして伝えることができてよかったです。（正木さん
+                      / 25歳）
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide customer__card">
+                  <figure class="card__img">
+                    <img src="images/S__23953523.jpg" alt="" />
+                  </figure>
+                  <div class="card__textarea">
+                    <p class="card__text">
+                      両親にプレゼントしたところ、すごく喜んでくれました。普段恥ずかしくて伝えられない想いをこうして伝えることができてよかったです。（正木さん
+                      / 25歳）
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="faq" id="faq">
+        <div class="faq__inner">
+          <h2 class="faq__title">よくあるご質問</h2>
+          <div class="accordion-wrapper">
+            <dl class="accordion">
+              <dt class="accordion__title js-accordion__title">
+                <p class="accordion__title--text">
+                  Q 利用の流れを教えてください
+                </p>
+                <span class="accordion__title--btn"> </span>
+              </dt>
+              <dd class="accordion__body js-accordion__body">
+                A
+                ユアコーディングはコーディングに特化したサービスですので、デザインからお受けすることは基本的にありません。
+                ただデザインを行う際は提携しているデザイナーと連携して対応させていただきますので、別途ご連絡ください。
+              </dd>
+            </dl>
+            <dl class="accordion">
+              <dt class="accordion__title js-accordion__title">
+                <p class="accordion__title--text">
+                  Q 料金について教えてください
+                </p>
+                <span class="accordion__title--btn"> </span>
+              </dt>
+              <dd class="accordion__body js-accordion__body">
+                A
+                ユアコーディングはコーディングに特化したサービスですので、デザインからお受けすることは基本的にありません。
+                ただデザインを行う際は提携しているデザイナーと連携して対応させていただきますので、別途ご連絡ください。
+              </dd>
+            </dl>
+            <dl class="accordion">
+              <dt class="accordion__title js-accordion__title">
+                <p class="accordion__title--text">
+                  Q 料金の支払い方法について教えてください
+                </p>
+                <span class="accordion__title--btn"> </span>
+              </dt>
+              <dd class="accordion__body js-accordion__body">
+                A
+                ユアコーディングはコーディングに特化したサービスですので、デザインからお受けすることは基本的にありません。
+                ただデザインを行う際は提携しているデザイナーと連携して対応させていただきますので、別途ご連絡ください。
+              </dd>
+            </dl>
+            <dl class="accordion">
+              <dt class="accordion__title js-accordion__title">
+                <p class="accordion__title--text">
+                  Q 予約後にキャンセル、 もしくは延期したい場合は
+                  どうしたらいいですか？
+                </p>
+                <span class="accordion__title--btn"> </span>
+              </dt>
+              <dd class="accordion__body js-accordion__body">
+                A　ユアコーディングはコーディングに特化したサービスですので、デザインからお受けすることは基本的にありません。
+                ただデザインを行う際は提携しているデザイナーと連携して対応させていただきますので、別途ご連絡ください。
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+      <section class="message" id="message">
+        <div class="message__inner"
+        >
+          <h2 class="message__title">MORIWAKI Videoの思い</h2>
+          <p class="message__text">
+            私たちはこの世から一人でも多くの「MORIWAKI」を消したいと思っています。
+          </p>
+          <p class="message__text">
+            「MORIWAKI」とは何者か。<br />
+            それは、大切な身近な人に身近すぎるがゆえに近況や感謝などを伝えられず、その人が亡くなった後<br />
+            「もっとたくさん会話をすればよかった」<br />
+            と後悔する人のことです。
+          </p>
+          <p class="message__text">
+            今後「MORIWAKI」と同じ後悔をする人が
+            一人でも少なくなれば。後悔となりうることを 防ぐことができれば。<br />そんな思いから、ご両親を中心に身近な人に感謝の想いを伝えるお手伝いがしたいと考えました。
+          </p>
+          <p class="message__text">
+            そして、MORIWAKI Videoを通じて
+            感謝を伝えてもらった人だけでなく、伝えた人も幸せになれる。
+            <br />そんなきっかけになれることを私たちは望んでおります。
+          </p>
+        </div>
+      </section>
+      <section class="reservertion"></section>
+      <section class="contact"></section>
+      <section class="page-top">
+        <a class="page-top__btn page-top-btn" 　href="#"
+          ><i class="fas fa-arrow-up"></i
+        ></a>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="scripts/libs/youtubePlayerApi.js"></script>
+    <!-- swiper CDNここから -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- swiper CDNここまで -->
+    <!-- swiper.jsここから -->
+    <script src="scripts/libs/swiper.js"></script>
+    <!-- swiper.jsここまで -->
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
